@@ -4,20 +4,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
 <title>ParkSync — City of Riverton MRP</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
+  color-scheme: light;
   --ink: #1a1208; --paper: #f5f0e8; --orange: #e8571a;
   --teal: #0e7a6b; --red: #c0392b; --blue: #1d6db5;
   --sand: #e8d8b8; --cream: #fff8f0; --mid: #8a7060; --light: #f0ebe0;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Source Sans 3', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; font-size: 15px; line-height: 1.6; }
+html { scroll-behavior: smooth; background-color: #f5f0e8; }
+body { font-family: 'Source Sans 3', sans-serif; background: #f5f0e8; background-color: #f5f0e8; color: #1a1208; overflow-x: hidden; font-size: 15px; line-height: 1.6; }
 
 /* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: var(–ink); height: 56px; display: flex; align-items: center; padding: 0 5%; border-bottom: 3px solid var(–orange); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: #1a1208; background-color: #1a1208; height: 56px; display: flex; align-items: center; padding: 0 5%; border-bottom: 3px solid var(–orange); }
 .nav-brand { font-family: ‘Playfair Display’, serif; font-size: 18px; font-weight: 900; color: #fff; margin-right: auto; text-decoration: none; }
 .nav-brand em { color: var(–orange); font-style: normal; }
 .nav-links { display: flex; }
@@ -26,9 +28,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: var(
 
 /* SECTIONS */
 section { padding: 90px 8% 80px; }
-.dark { background: var(–ink); }
-.lite { background: var(–paper); }
-.crm  { background: var(–cream); }
+.dark { background: #1a1208; background-color: #1a1208; }
+.lite { background: #f5f0e8; background-color: #f5f0e8; }
+.crm  { background: #fff8f0; background-color: #fff8f0; }
 
 .lbl { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(–orange); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
 .lbl::before { content: ‘’; width: 20px; height: 2px; background: var(–orange); }
@@ -50,7 +52,7 @@ section { padding: 90px 8% 80px; }
 .bt:hover { background: #0a6258; }
 
 /* HERO */
-#home { min-height: 100vh; background: var(–ink); display: flex; flex-direction: column; justify-content: center; padding: 110px 8% 80px; position: relative; overflow: hidden; }
+#home { min-height: 100vh; background: #1a1208; background-color: #1a1208; display: flex; flex-direction: column; justify-content: center; padding: 110px 8% 80px; position: relative; overflow: hidden; }
 .hbg { position: absolute; inset: 0; background-image: linear-gradient(rgba(232,87,26,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(232,87,26,0.04) 1px,transparent 1px); background-size: 55px 55px; }
 .hcourse { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(–orange); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
 .hcourse::before { content: ‘’; width: 24px; height: 2px; background: var(–orange); }
@@ -268,7 +270,7 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
 .fm { font-size: 11px; color: rgba(255,255,255,0.35); text-align: right; }
 
 /* REVEAL */
-.rv { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.rv { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
 .rv.vis { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 900px) {
@@ -702,10 +704,7 @@ function swD(page, btn) {
   const map = { overview: '', analysis: '#analysis', beforeafter: '#before-after', explorer: '#explorer', latency: '#latency' };
   frame.src = 'https://ganesh79810.github.io/MRP_DASHBOARD/' + (map[page] || '');
 }
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-}, { threshold: 0.07, rootMargin: '0px 0px -50px 0px' });
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+document.querySelectorAll('.rv').forEach(el => el.classList.add('vis'));
 const secs = document.querySelectorAll('section[id]');
 const nas = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
