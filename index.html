@@ -6,13 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <title>ParkSync — City of Riverton MRP</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
   color-scheme: light;
   --ink: #1a1208; --paper: #f5f0e8; --orange: #e8571a;
   --teal: #0e7a6b; --red: #c0392b; --blue: #1d6db5;
-  --sand: #e8d8b8; --cream: #fff8f0; --mid: #8a7060; --light: #f0ebe0;
+  --sand: #e8d8b8; --cream: #fff8f0; --mid: #8a7060; --light: #f0ebe0; --muted: #8a7060;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; background-color: #f5f0e8; }
@@ -21,10 +21,10 @@ body { font-family: 'Source Sans 3', sans-serif; background: #f5f0e8; background
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: #1a1208; background-color: #1a1208; height: 56px; display: flex; align-items: center; padding: 0 5%; border-bottom: 3px solid var(–orange); }
 .nav-brand { font-family: ‘Playfair Display’, serif; font-size: 18px; font-weight: 900; color: #fff; margin-right: auto; text-decoration: none; }
-.nav-brand em { color: var(–orange); font-style: normal; }
+.nav-brand em { color: #e8571a; font-style: normal; }
 .nav-links { display: flex; }
 .nav-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 0.7px; text-transform: uppercase; padding: 0 11px; line-height: 56px; transition: color 0.2s; white-space: nowrap; }
-.nav-links a:hover { color: var(–orange); }
+.nav-links a:hover { color: #e8571a; }
 
 /* SECTIONS */
 section { padding: 90px 8% 80px; }
@@ -32,14 +32,14 @@ section { padding: 90px 8% 80px; }
 .lite { background: #f5f0e8; background-color: #f5f0e8; }
 .crm  { background: #fff8f0; background-color: #fff8f0; }
 
-.lbl { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(–orange); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.lbl { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e8571a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
 .lbl::before { content: ‘’; width: 20px; height: 2px; background: var(–orange); }
 .sh { font-family: ‘Playfair Display’, serif; font-size: clamp(28px, 4vw, 46px); font-weight: 900; line-height: 1.1; margin-bottom: 14px; }
-.sh span { color: var(–orange); }
+.sh span { color: #e8571a; }
 .sh.w { color: #fff; }
-.sl { font-size: 16px; color: var(–mid); max-width: 680px; line-height: 1.7; margin-bottom: 50px; }
+.sl { font-size: 16px; color: #8a7060; max-width: 680px; line-height: 1.7; margin-bottom: 50px; }
 .sl.w { color: rgba(255,255,255,0.6); }
-.sub3 { font-size: 16px; font-weight: 700; color: var(–ink); margin: 44px 0 16px; }
+.sub3 { font-size: 16px; font-weight: 700; color: #1a1208; margin: 44px 0 16px; }
 .sub3.w { color: #fff; }
 
 /* BUTTONS */
@@ -47,21 +47,21 @@ section { padding: 90px 8% 80px; }
 .bp { background: var(–orange); color: #fff; }
 .bp:hover { background: #d04a10; transform: translateY(-1px); }
 .bg { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.3); }
-.bg:hover { border-color: var(–orange); color: var(–orange); }
+.bg:hover { border-color: #e8571a; color: #e8571a; }
 .bt { background: var(–teal); color: #fff; }
 .bt:hover { background: #0a6258; }
 
 /* HERO */
 #home { min-height: 100vh; background: #1a1208; background-color: #1a1208; display: flex; flex-direction: column; justify-content: center; padding: 110px 8% 80px; position: relative; overflow: hidden; }
 .hbg { position: absolute; inset: 0; background-image: linear-gradient(rgba(232,87,26,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(232,87,26,0.04) 1px,transparent 1px); background-size: 55px 55px; }
-.hcourse { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(–orange); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+.hcourse { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e8571a; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
 .hcourse::before { content: ‘’; width: 24px; height: 2px; background: var(–orange); }
 .htitle { font-family: ‘Playfair Display’, serif; font-size: clamp(40px, 6vw, 80px); color: #fff; line-height: 1.05; font-weight: 900; max-width: 740px; margin-bottom: 22px; }
-.htitle em { color: var(–orange); font-style: normal; }
+.htitle em { color: #e8571a; font-style: normal; }
 .hsub { font-size: 16px; color: rgba(255,255,255,0.58); max-width: 540px; line-height: 1.7; margin-bottom: 40px; }
 .hstats { display: flex; gap: 36px; flex-wrap: wrap; margin-bottom: 44px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
-.hsv { font-family: ‘Playfair Display’, serif; font-size: 34px; font-weight: 900; color: var(–orange); }
-.hsl { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.7px; margin-top: 3px; }
+.hsv { font-family: ‘Playfair Display’, sans-serif; font-size: 34px; font-weight: 900; color: #e8571a; color: #e8571a; }
+.hsl { font-size: 11px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.7px; margin-top: 3px; }
 .hbtns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; }
 .hteam { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
 .htlbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.3); margin-right: 6px; }
@@ -69,50 +69,50 @@ section { padding: 90px 8% 80px; }
 
 /* EXEC SUMMARY */
 .eg { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.et p { color: var(–mid); margin-bottom: 14px; }
+.et p { color: #8a7060; margin-bottom: 14px; }
 .ehl { display: flex; flex-direction: column; gap: 14px; }
 .ehli { background: #fff; padding: 16px 18px; border-left: 3px solid var(–orange); }
-.ehli.t { border-left-color: var(–teal); }
-.ehli.b { border-left-color: var(–blue); }
-.ehli strong { display: block; font-size: 13px; color: var(–ink); margin-bottom: 3px; }
-.ehli span { font-size: 12.5px; color: var(–mid); }
+.ehli.t { border-left-color: #0e7a6b; }
+.ehli.b { border-left-color: #1d6db5; }
+.ehli strong { display: block; font-size: 13px; color: #1a1208; margin-bottom: 3px; }
+.ehli span { font-size: 12.5px; color: #8a7060; }
 .ebtns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
 
 /* PROBLEM */
 .flow { display: flex; align-items: stretch; gap: 0; margin-bottom: 44px; flex-wrap: wrap; }
 .fs { flex: 1; min-width: 155px; background: #fff; padding: 22px 16px; border-left: 3px solid var(–orange); }
-.fs.bad { border-left-color: var(–red); }
+.fs.bad { border-left-color: #c0392b; }
 .fa { display: flex; align-items: center; justify-content: center; padding: 0 8px; color: var(–sand); font-size: 20px; align-self: center; flex-shrink: 0; }
-.fsn { font-family: ‘Playfair Display’, serif; font-size: 26px; font-weight: 900; color: var(–orange); line-height: 1; margin-bottom: 7px; }
-.fs.bad .fsn { color: var(–red); }
-.fst { font-size: 12px; font-weight: 700; color: var(–ink); margin-bottom: 4px; }
-.fsd { font-size: 11.5px; color: var(–mid); line-height: 1.5; }
+.fsn { font-family: ‘Playfair Display’, serif; font-size: 26px; font-weight: 900; color: #e8571a; line-height: 1; margin-bottom: 7px; }
+.fs.bad .fsn { color: #c0392b; }
+.fst { font-size: 12px; font-weight: 700; color: #1a1208; margin-bottom: 4px; }
+.fsd { font-size: 11.5px; color: #8a7060; line-height: 1.5; }
 
 .kcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 36px; }
 .kc { background: #fff; padding: 20px 16px; border-top: 3px solid var(–orange); box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-.kc.r { border-top-color: var(–red); }
-.kc.t { border-top-color: var(–teal); }
-.kc.b { border-top-color: var(–blue); }
-.kcv { font-family: ‘Playfair Display’, serif; font-size: 36px; font-weight: 900; color: var(–ink); line-height: 1; }
-.kcn { font-size: 11px; color: var(–mid); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 6px; }
-.kco { font-size: 12px; color: var(–red); margin-top: 3px; font-weight: 600; }
-.kc.t .kco { color: var(–teal); }
+.kc.r { border-top-color: #c0392b; }
+.kc.t { border-top-color: #0e7a6b; }
+.kc.b { border-top-color: #1d6db5; }
+.kcv { font-family: ‘Playfair Display’, serif; font-size: 36px; font-weight: 900; color: #1a1208; line-height: 1; }
+.kcn { font-size: 11px; color: #8a7060; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 6px; }
+.kco { font-size: 12px; color: #c0392b; margin-top: 3px; font-weight: 600; }
+.kc.t .kco { color: #0e7a6b; }
 
 .scards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .sc { background: #fff; padding: 18px 20px; border-left: 4px solid var(–orange); }
-.sc.t { border-left-color: var(–teal); }
-.sc.r { border-left-color: var(–red); }
-.sc.b { border-left-color: var(–blue); }
-.sc h4 { font-size: 13px; font-weight: 700; color: var(–ink); margin-bottom: 5px; }
-.sc p { font-size: 12.5px; color: var(–mid); line-height: 1.6; }
+.sc.t { border-left-color: #0e7a6b; }
+.sc.r { border-left-color: #c0392b; }
+.sc.b { border-left-color: #1d6db5; }
+.sc h4 { font-size: 13px; font-weight: 700; color: #1a1208; margin-bottom: 5px; }
+.sc p { font-size: 12.5px; color: #8a7060; line-height: 1.6; }
 
 /* RESEARCH */
 .rg { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 36px; }
 .rc { background: rgba(255,255,255,0.06); padding: 22px 18px; border: 1px solid rgba(255,255,255,0.1); border-top: 3px solid var(–orange); }
-.rc.t { border-top-color: var(–teal); }
-.rc.b { border-top-color: var(–blue); }
-.rsrc { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(–orange); margin-bottom: 10px; }
-.rc.t .rsrc { color: var(–teal); }
+.rc.t { border-top-color: #0e7a6b; }
+.rc.b { border-top-color: #1d6db5; }
+.rsrc { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #e8571a; margin-bottom: 10px; }
+.rc.t .rsrc { color: #0e7a6b; }
 .rc.b .rsrc { color: #6aabf7; }
 .rc h4 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 8px; }
 .rc p { font-size: 12.5px; color: rgba(255,255,255,0.6); line-height: 1.6; }
@@ -121,12 +121,12 @@ section { padding: 90px 8% 80px; }
 /* DATA */
 .dcols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-bottom: 44px; }
 .dbox { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 24px; }
-.dbox h3 { font-family: ‘Playfair Display’, serif; font-size: 17px; color: var(–orange); margin-bottom: 16px; font-weight: 700; }
+.dbox h3 { font-family: ‘Playfair Display’, serif; font-size: 17px; color: #e8571a; margin-bottom: 16px; font-weight: 700; }
 .rl { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .rl li { display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; color: rgba(255,255,255,0.68); line-height: 1.5; }
-.rl li::before { content: ‘→’; color: var(–orange); font-weight: 700; flex-shrink: 0; }
+.rl li::before { content: ‘→’; color: #e8571a; font-weight: 700; flex-shrink: 0; }
 .vt { width: 100%; border-collapse: collapse; }
-.vt th { background: rgba(232,87,26,0.18); color: var(–orange); font-size: 10px; text-transform: uppercase; letter-spacing: 0.7px; padding: 7px 10px; text-align: left; }
+.vt th { background: rgba(232,87,26,0.18); color: #e8571a; font-size: 10px; text-transform: uppercase; letter-spacing: 0.7px; padding: 7px 10px; text-align: left; }
 .vt td { padding: 7px 10px; font-size: 12px; color: rgba(255,255,255,0.68); border-bottom: 1px solid rgba(255,255,255,0.06); }
 .vt tr:last-child td { border-bottom: none; }
 .vtg { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 10px; background: rgba(14,122,107,0.25); color: #5dd6c0; }
@@ -136,35 +136,35 @@ section { padding: 90px 8% 80px; }
 /* ERD */
 .erd { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .ec { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-top: 3px solid var(–teal); padding: 18px; }
-.ec.o { border-top-color: var(–orange); }
-.ec.b { border-top-color: var(–blue); }
+.ec.o { border-top-color: #e8571a; }
+.ec.b { border-top-color: #1d6db5; }
 .ec h4 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.7px; }
 .ea { font-size: 11.5px; color: rgba(255,255,255,0.55); line-height: 1.9; }
-.pk { color: var(–orange); font-weight: 700; }
-.fk { color: var(–teal); }
+.pk { color: #e8571a; font-weight: 700; }
+.fk { color: #0e7a6b; }
 .erels { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
 .erel { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 14px; font-size: 12px; color: rgba(255,255,255,0.6); }
 
 /* DATA FLOW */
 .dflow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 24px 0 40px; }
 .dfs { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 18px 14px; text-align: center; position: relative; }
-.dfs:not(:last-child)::after { content: ‘→’; position: absolute; right: -14px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(–orange); z-index: 1; }
+.dfs:not(:last-child)::after { content: ‘→’; position: absolute; right: -14px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #e8571a; z-index: 1; }
 .dfs.bad { border-color: rgba(192,57,43,0.4); }
 .dfsi { font-size: 22px; margin-bottom: 8px; }
-.dfst { font-size: 12px; font-weight: 700; color: var(–orange); margin-bottom: 4px; }
-.dfs.bad .dfst { color: var(–red); }
+.dfst { font-size: 12px; font-weight: 700; color: #e8571a; margin-bottom: 4px; }
+.dfs.bad .dfst { color: #c0392b; }
 .dfsd { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.5; }
 
 /* DASHBOARD */
 .dtabs { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
 .dtab { padding: 7px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.6); font-size: 11.5px; font-weight: 600; cursor: pointer; border-radius: 3px; transition: all 0.2s; }
-.dtab:hover, .dtab.active { background: var(–orange); color: #fff; border-color: var(–orange); }
+.dtab:hover, .dtab.active { background: var(–orange); color: #fff; border-color: #e8571a; }
 .ef { width: 100%; border: none; border-radius: 6px; box-shadow: 0 18px 54px rgba(0,0,0,0.35); display: block; }
 .icards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 26px; }
 .ic { background: rgba(255,255,255,0.05); border-left: 3px solid var(–orange); padding: 14px 16px; }
-.ic.t { border-left-color: var(–teal); }
-.ic.r { border-left-color: var(–red); }
-.ic.b { border-left-color: var(–blue); }
+.ic.t { border-left-color: #0e7a6b; }
+.ic.r { border-left-color: #c0392b; }
+.ic.b { border-left-color: #1d6db5; }
 .ic strong { display: block; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .ic p { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.6; }
 
@@ -173,8 +173,8 @@ section { padding: 90px 8% 80px; }
 .flist { display: flex; flex-direction: column; gap: 12px; }
 .fi { display: flex; gap: 14px; background: #fff; padding: 16px 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .fic { width: 38px; height: 38px; flex-shrink: 0; background: var(–ink); display: flex; align-items: center; justify-content: center; font-size: 17px; border-radius: 2px; }
-.fib h4 { font-size: 13px; font-weight: 700; color: var(–ink); margin-bottom: 4px; }
-.fib p { font-size: 12.5px; color: var(–mid); line-height: 1.6; }
+.fib h4 { font-size: 13px; font-weight: 700; color: #1a1208; margin-bottom: 4px; }
+.fib p { font-size: 12.5px; color: #8a7060; line-height: 1.6; }
 .pwrap { border-radius: 6px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.14); }
 
 /* ARCHITECTURE */
@@ -183,32 +183,32 @@ section { padding: 90px 8% 80px; }
 .alayers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .al { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 16px 14px; text-align: center; }
 .ali { font-size: 22px; margin-bottom: 8px; }
-.alt { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(–orange); margin-bottom: 8px; }
+.alt { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #e8571a; margin-bottom: 8px; }
 .ald { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.9; }
 
 /* ROADMAP */
 .rm { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 36px; }
 .rmp { background: #fff; padding: 20px 18px; border-top: 3px solid var(–orange); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.rmp.t { border-top-color: var(–teal); }
-.rmp.b { border-top-color: var(–blue); }
-.rptag { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(–orange); margin-bottom: 8px; }
-.rmp.t .rptag { color: var(–teal); }
-.rmp.b .rptag { color: var(–blue); }
-.rmp h4 { font-size: 13px; font-weight: 700; color: var(–ink); margin-bottom: 8px; }
+.rmp.t { border-top-color: #0e7a6b; }
+.rmp.b { border-top-color: #1d6db5; }
+.rptag { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #e8571a; margin-bottom: 8px; }
+.rmp.t .rptag { color: #0e7a6b; }
+.rmp.b .rptag { color: #1d6db5; }
+.rmp h4 { font-size: 13px; font-weight: 700; color: #1a1208; margin-bottom: 8px; }
 .rmp ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-.rmp ul li { font-size: 12px; color: var(–mid); padding-left: 14px; position: relative; }
-.rmp ul li::before { content: ‘✓’; position: absolute; left: 0; color: var(–teal); font-size: 10px; }
+.rmp ul li { font-size: 12px; color: #8a7060; padding-left: 14px; position: relative; }
+.rmp ul li::before { content: ‘✓’; position: absolute; left: 0; color: #0e7a6b; font-size: 10px; }
 
 /* RACI */
 .rt { width: 100%; border-collapse: collapse; background: #fff; }
 .rt th { background: var(–ink); color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; padding: 9px 10px; text-align: center; font-weight: 600; }
 .rt th:first-child { text-align: left; }
-.rt td { padding: 8px 10px; font-size: 12.5px; text-align: center; border-bottom: 1px solid var(–light); color: var(–ink); }
-.rt td:first-child { text-align: left; color: var(–mid); font-size: 12px; }
+.rt td { padding: 8px 10px; font-size: 12.5px; text-align: center; border-bottom: 1px solid var(–light); color: #1a1208; }
+.rt td:first-child { text-align: left; color: #8a7060; font-size: 12px; }
 .rt tr:nth-child(odd) td { background: var(–light); }
-.rr { color: var(–orange); font-weight: 700; }
-.ra { color: var(–blue); font-weight: 700; }
-.rc2 { color: var(–teal); font-weight: 700; }
+.rr { color: #e8571a; font-weight: 700; }
+.ra { color: #1d6db5; font-weight: 700; }
+.rc2 { color: #0e7a6b; font-weight: 700; }
 
 /* BEFORE AFTER */
 .ba { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center; margin-bottom: 36px; }
@@ -216,57 +216,57 @@ section { padding: 90px 8% 80px; }
 .bef { background: #fff0f0; border: 2px solid #f0c0b0; }
 .aft { background: #f0fff8; border: 2px solid #a0e0c0; }
 .bal { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
-.bef .bal { color: var(–red); }
-.aft .bal { color: var(–teal); }
+.bef .bal { color: #c0392b; }
+.aft .bal { color: #0e7a6b; }
 .bar { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 13px; }
 .bar:last-child { border-bottom: none; }
 .bar .ll { color: #5a4a40; }
-.bef .bar .vv { color: var(–red); font-weight: 700; font-size: 14px; }
-.aft .bar .vv { color: var(–teal); font-weight: 700; font-size: 14px; }
+.bef .bar .vv { color: #c0392b; font-weight: 700; font-size: 14px; }
+.aft .bar .vv { color: #0e7a6b; font-weight: 700; font-size: 14px; }
 .bam { background: var(–ink); color: #fff; padding: 18px 14px; text-align: center; border-radius: 6px; }
-.bam .bw { font-family: ‘Playfair Display’, serif; font-size: 20px; font-weight: 900; color: var(–orange); }
+.bam .bw { font-family: ‘Playfair Display’, serif; font-size: 20px; font-weight: 900; color: #e8571a; }
 .bam .bs { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 4px; }
 .ir { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .irc { background: #fff; padding: 20px 16px; text-align: center; border-top: 3px solid var(–teal); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.irc.o { border-top-color: var(–orange); }
-.irb { font-family: ‘Playfair Display’, serif; font-size: 32px; font-weight: 900; color: var(–teal); }
-.irc.o .irb { color: var(–orange); }
-.irl { font-size: 11px; color: var(–mid); margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.irc.o { border-top-color: #e8571a; }
+.irb { font-family: ‘Playfair Display’, serif; font-size: 32px; font-weight: 900; color: #0e7a6b; }
+.irc.o .irb { color: #e8571a; }
+.irl { font-size: 11px; color: #8a7060; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* KPI TABLE */
 .kt { width: 100%; border-collapse: collapse; margin-top: 24px; }
 .kt th { background: var(–ink); color: #fff; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; text-align: left; font-weight: 600; }
-.kt td { padding: 10px 12px; font-size: 13px; border-bottom: 1px solid var(–light); color: var(–ink); }
+.kt td { padding: 10px 12px; font-size: 13px; border-bottom: 1px solid var(–light); color: #1a1208; }
 .kt tr:nth-child(even) td { background: var(–light); }
-.kt .cur { color: var(–red); font-weight: 700; }
-.kt .tgt { color: var(–teal); font-weight: 700; }
+.kt .cur { color: #c0392b; font-weight: 700; }
+.kt .tgt { color: #0e7a6b; font-weight: 700; }
 
 /* ETHICS */
 .etg { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .etc { background: rgba(255,255,255,0.05); padding: 22px 20px; border: 1px solid rgba(255,255,255,0.1); border-top: 3px solid var(–orange); }
-.etc.t { border-top-color: var(–teal); }
-.etc.b { border-top-color: var(–blue); }
-.etc.r { border-top-color: var(–red); }
+.etc.t { border-top-color: #0e7a6b; }
+.etc.b { border-top-color: #1d6db5; }
+.etc.r { border-top-color: #c0392b; }
 .etc h4 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 8px; }
 .etc p { font-size: 12.5px; color: rgba(255,255,255,0.6); line-height: 1.6; }
 
 /* LESSONS */
 .lc { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .lci { background: #fff; padding: 22px 20px; border-top: 3px solid var(–orange); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.lci.t { border-top-color: var(–teal); }
-.lci.b { border-top-color: var(–blue); }
-.lci.r { border-top-color: var(–red); }
-.lci h4 { font-size: 13px; font-weight: 700; color: var(–ink); margin-bottom: 8px; }
-.lci p { font-size: 12.5px; color: var(–mid); line-height: 1.6; }
+.lci.t { border-top-color: #0e7a6b; }
+.lci.b { border-top-color: #1d6db5; }
+.lci.r { border-top-color: #c0392b; }
+.lci h4 { font-size: 13px; font-weight: 700; color: #1a1208; margin-bottom: 8px; }
+.lci p { font-size: 12.5px; color: #8a7060; line-height: 1.6; }
 .tcards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 44px; }
 .tc { background: #fff; padding: 20px 14px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-bottom: 3px solid var(–orange); }
-.tcn { font-size: 13px; font-weight: 700; color: var(–ink); margin-bottom: 4px; }
-.tcr { font-size: 10px; color: var(–orange); text-transform: uppercase; letter-spacing: 0.7px; }
+.tcn { font-size: 13px; font-weight: 700; color: #1a1208; margin-bottom: 4px; }
+.tcr { font-size: 10px; color: #e8571a; text-transform: uppercase; letter-spacing: 0.7px; }
 
 /* FOOTER */
 footer { background: var(–ink); border-top: 3px solid var(–orange); padding: 28px 8%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 .fb { font-family: ‘Playfair Display’, serif; font-size: 18px; color: #fff; font-weight: 900; text-decoration: none; }
-.fb em { color: var(–orange); font-style: normal; }
+.fb em { color: #e8571a; font-style: normal; }
 .fm { font-size: 11px; color: rgba(255,255,255,0.35); text-align: right; }
 
 /* REVEAL */
@@ -280,6 +280,14 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
 .tcards { grid-template-columns: repeat(2, 1fr); }
 .bam { display: none; }
 }
+</style>
+
+<style>
+/* iOS Safari failsafe — explicit color overrides */
+.hsv { color: #e8571a !important; }
+.hsl { color: rgba(255,255,255,0.7) !important; }
+[style*="var(--"] { color: inherit; }
+:root { color-scheme: light only; }
 </style>
 
 </head>
@@ -309,10 +317,10 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
   <h1 class="htitle">Modernizing <em>Riverton's</em><br>Parking Enforcement</h1>
   <p class="hsub">A data-driven analytics solution that exposes how a 2 to 4 hour batch upload cycle creates wrongful citations, wastes staff hours, and erodes resident trust — and projects what real-time sync changes.</p>
   <div class="hstats">
-    <div><div class="hsv">35.9%</div><div class="hsl">Erroneous citation rate</div></div>
-    <div><div class="hsv">101.4</div><div class="hsl">Avg sync delay (min)</div></div>
-    <div><div class="hsv">547</div><div class="hsl">Disputes per year</div></div>
-    <div><div class="hsv">86%</div><div class="hsl">Projected error reduction</div></div>
+    <div><div class="hsv" style="color:#e8571a!important;font-size:34px;font-weight:900">35.9%</div><div class="hsl">Erroneous citation rate</div></div>
+    <div><div class="hsv" style="color:#e8571a!important;font-size:34px;font-weight:900">101.4</div><div class="hsl">Avg sync delay (min)</div></div>
+    <div><div class="hsv" style="color:#e8571a!important;font-size:34px;font-weight:900">547</div><div class="hsl">Disputes per year</div></div>
+    <div><div class="hsv" style="color:#e8571a!important;font-size:34px;font-weight:900">86%</div><div class="hsl">Projected error reduction</div></div>
   </div>
   <div class="hbtns">
     <a href="https://ganesh79810.github.io/MRP_DASHBOARD/" target="_blank" class="btn bp">Analytics Dashboard</a>
@@ -370,7 +378,7 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
     <div class="kc r"><div class="kcv">431</div><div class="kcn">Wrongful citations per year</div><div class="kco">35.9% of all 1,200 citations</div></div>
     <div class="kc"><div class="kcv">101.4</div><div class="kcn">Avg sync latency (minutes)</div><div class="kco">All 4 zones exceed 90 min</div></div>
     <div class="kc r"><div class="kcv">547</div><div class="kcn">Disputes filed per year</div><div class="kco">59.8% are dismissed</div></div>
-    <div class="kc t"><div class="kcv">182</div><div class="kcn">Staff hours wasted per year</div><div class="kco" style="color:var(--teal)">~20 minutes per dispute</div></div>
+    <div class="kc t"><div class="kcv">182</div><div class="kcn">Staff hours wasted per year</div><div class="kco" style="color:#0e7a6b">~20 minutes per dispute</div></div>
   </div>
   <h3 class="sub3">Stakeholder Perspectives</h3>
   <div class="scards rv">
@@ -462,8 +470,8 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
     <a href="https://ganesh79810.github.io/MRP_DASHBOARD/" target="_blank" class="btn bg" style="margin-left:auto;padding:6px 16px;font-size:11px">Full Screen ↗</a>
   </div>
   <div id="dframe-wrap" style="background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden">
-  <div style="background:var(--ink);padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#fff;font-weight:600">Riverton <span style="color:var(--orange)">Parking</span> Analytics</div>
+  <div style="background:#1a1208;padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#fff;font-weight:600">Riverton <span style="color:#e8571a">Parking</span> Analytics</div>
     <div style="display:flex;gap:8px">
       <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57"></div>
       <div style="width:10px;height:10px;border-radius:50%;background:#febc2e"></div>
@@ -471,23 +479,23 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
     </div>
   </div>
   <div style="padding:32px 24px;text-align:center">
-    <div style="font-size:13px;color:var(--muted);margin-bottom:20px">The analytics dashboard runs as a live interactive web app. Click below to open it in a new tab.</div>
+    <div style="font-size:13px;color:#8a7060;margin-bottom:20px">The analytics dashboard runs as a live interactive web app. Click below to open it in a new tab.</div>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:500px;margin:0 auto 24px">
       <div style="background:rgba(232,87,26,0.1);border:1px solid rgba(232,87,26,0.3);padding:14px;text-align:center">
-        <div style="font-size:26px;font-weight:900;color:var(--orange);font-family:'IBM Plex Mono',monospace">35.9%</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Error citation rate</div>
+        <div style="font-size:26px;font-weight:900;color:#e8571a;font-family:'IBM Plex Mono',monospace">35.9%</div>
+        <div style="font-size:10px;color:#8a7060;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Error citation rate</div>
       </div>
       <div style="background:rgba(14,184,160,0.1);border:1px solid rgba(14,184,160,0.3);padding:14px;text-align:center">
-        <div style="font-size:26px;font-weight:900;color:var(--teal);font-family:'IBM Plex Mono',monospace">101.4</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Avg sync delay (min)</div>
+        <div style="font-size:26px;font-weight:900;color:#0e7a6b;font-family:'IBM Plex Mono',monospace">101.4</div>
+        <div style="font-size:10px;color:#8a7060;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Avg sync delay (min)</div>
       </div>
       <div style="background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.3);padding:14px;text-align:center">
-        <div style="font-size:26px;font-weight:900;color:var(--red);font-family:'IBM Plex Mono',monospace">547</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Disputes per year</div>
+        <div style="font-size:26px;font-weight:900;color:#c0392b;font-family:'IBM Plex Mono',monospace">547</div>
+        <div style="font-size:10px;color:#8a7060;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Disputes per year</div>
       </div>
       <div style="background:rgba(46,204,122,0.1);border:1px solid rgba(46,204,122,0.3);padding:14px;text-align:center">
         <div style="font-size:26px;font-weight:900;color:#2ecc7a;font-family:'IBM Plex Mono',monospace">86%</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Projected error reduction</div>
+        <div style="font-size:10px;color:#8a7060;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px">Projected error reduction</div>
       </div>
     </div>
     <a href="https://ganesh79810.github.io/MRP_DASHBOARD/" target="_blank" class="btn bp" style="font-size:14px;padding:12px 28px">Open Analytics Dashboard ↗</a>
@@ -516,7 +524,7 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
       <div class="fi"><div class="fic">⚡</div><div class="fib"><h4>Real-Time Sync</h4><p>Event-driven permit push replaces the batch CSV export. Officer devices update within 2 minutes of permit approval. The synchronization gap is eliminated entirely.</p></div></div>
     </div>
     <div>
-      <div class="pwrap" style="background:var(--ink);border-radius:6px;overflow:hidden">
+      <div class="pwrap" style="background:#1a1208;border-radius:6px;overflow:hidden">
   <div style="background:#171b24;padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #2a2f3e">
     <div style="font-size:12px;color:#fff;font-weight:600;font-family:'IBM Plex Mono',monospace">Park<span style="color:#e8571a">Sync</span> App</div>
     <span style="font-size:9px;font-weight:600;padding:2px 8px;border-radius:10px;background:rgba(14,184,160,0.15);color:#0fb8a0;border:1px solid rgba(14,184,160,0.3)">LIVE</span>
@@ -540,7 +548,7 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
     <a href="https://ganesh79810.github.io/prototype/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#e8571a;color:#fff;padding:10px 22px;font-size:13px;font-weight:600;text-decoration:none;border-radius:3px">Open ParkSync App ↗</a>
   </div>
 </div>
-      <p style="font-size:12px;color:var(--mid);margin-top:10px;text-align:center">Interactive prototype — <a href="https://ganesh79810.github.io/prototype/" target="_blank" style="color:var(--orange);font-weight:600">Open full screen ↗</a></p>
+      <p style="font-size:12px;color:#8a7060;margin-top:10px;text-align:center">Interactive prototype — <a href="https://ganesh79810.github.io/prototype/" target="_blank" style="color:#e8571a;font-weight:600">Open full screen ↗</a></p>
     </div>
   </div>
 </section>
@@ -663,21 +671,21 @@ footer { background: var(–ink); border-top: 3px solid var(–orange); padding:
   <h3 class="sub3" style="margin-top:50px">Outcomes and Next Steps</h3>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:44px" class="rv">
     <div style="background:#fff;padding:22px 20px;border-top:3px solid var(--orange);box-shadow:0 2px 8px rgba(0,0,0,0.06)">
-      <h4 style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:12px">What This Project Proves</h4>
+      <h4 style="font-size:13px;font-weight:700;color:#1a1208;margin-bottom:12px">What This Project Proves</h4>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--teal);font-weight:700">1.</span> Sync latency is the single root cause of wrongful citations</li>
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--teal);font-weight:700">2.</span> The problem is systemic and city-wide, not localized</li>
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--teal);font-weight:700">3.</span> The downstream costs are measurable and preventable</li>
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--teal);font-weight:700">4.</span> Real-time sync reduces errors by 86% at zero additional cost</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#0e7a6b;font-weight:700">1.</span> Sync latency is the single root cause of wrongful citations</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#0e7a6b;font-weight:700">2.</span> The problem is systemic and city-wide, not localized</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#0e7a6b;font-weight:700">3.</span> The downstream costs are measurable and preventable</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#0e7a6b;font-weight:700">4.</span> Real-time sync reduces errors by 86% at zero additional cost</li>
       </ul>
     </div>
     <div style="background:#fff;padding:22px 20px;border-top:3px solid var(--teal);box-shadow:0 2px 8px rgba(0,0,0,0.06)">
-      <h4 style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:12px">Recommended Next Steps</h4>
+      <h4 style="font-size:13px;font-weight:700;color:#1a1208;margin-bottom:12px">Recommended Next Steps</h4>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--orange);font-weight:700">1.</span> 90-day pilot in the Downtown zone with live KPI tracking</li>
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--orange);font-weight:700">2.</span> IT integration assessment for real-time permit push (2 to 3 weeks)</li>
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--orange);font-weight:700">3.</span> Full city-wide rollout following successful pilot evaluation</li>
-        <li style="font-size:12.5px;color:var(--mid);padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--orange);font-weight:700">4.</span> Add predictive alert module for proactive latency monitoring</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#e8571a;font-weight:700">1.</span> 90-day pilot in the Downtown zone with live KPI tracking</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#e8571a;font-weight:700">2.</span> IT integration assessment for real-time permit push (2 to 3 weeks)</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#e8571a;font-weight:700">3.</span> Full city-wide rollout following successful pilot evaluation</li>
+        <li style="font-size:12.5px;color:#8a7060;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#e8571a;font-weight:700">4.</span> Add predictive alert module for proactive latency monitoring</li>
       </ul>
     </div>
   </div>
